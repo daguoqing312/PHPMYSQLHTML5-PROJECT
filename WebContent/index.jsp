@@ -18,6 +18,9 @@
 <FORM action="ResponseRitch">
 	<input type="submit" value="Submit" />	
 </FORM>
+<FORM action="ResponseRitch">
+	<input type="submit" value="Print" />
+</FORM>
 </body>
 </html>
 </jsp:root>
