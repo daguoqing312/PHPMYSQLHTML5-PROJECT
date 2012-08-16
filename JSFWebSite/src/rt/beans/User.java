@@ -21,6 +21,8 @@ public class User {
 		    // Image here a database access to validate the users
 		    if (name.equalsIgnoreCase("tester") && password.equalsIgnoreCase("tester")){
 		      return "success";
+		    }else if (name.equalsIgnoreCase("tester1") && password.equalsIgnoreCase("tester1")){
+		    	return "success1";
 		    } else {
 		      return "failed";
 		    }
