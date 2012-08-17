@@ -8,8 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
-<LINK href="<%=request.getContextPath()%>/css/mystyle.css"
-  rel="stylesheet" type="text/css">
+<%-- <LINK href="<%=request.getContextPath()%>/css/mystyle.css"  rel="stylesheet" type="text/css"> --%>
+<LINK href="<%=request.getContextPath()%>/assets/css/forTodo.css"  rel="stylesheet" type="text/css">
 </head>
 <body>
 <h3>Todo list</h3>
@@ -68,7 +68,7 @@
 
     <h:dataTable value="#{todoController.todos}" var="todo"
       styleClass="todo" headerClass="todoheader"
-      columnClasses="first, rest">
+      columnClasses="first,last">
       <h:column>
         <%-- Via this facet we define the table header (column 1) --%>
         <f:facet name="header">
