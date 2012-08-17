@@ -30,6 +30,11 @@
 		<managed-bean-class>rt.beans.TodoController</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>person</managed-bean-name>
+		<managed-bean-class>rt.beans.PersonBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 	<navigation-rule>
 		<display-name>LoginView</display-name>
 		<from-view-id>/LoginView.jsp</from-view-id>
@@ -42,16 +47,16 @@
 		<display-name>LoginView</display-name>
 		<from-view-id>/LoginView.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>success</from-outcome>
-			<to-view-id>/layer1/Trainer.jsp</to-view-id>
+			<from-outcome>success1</from-outcome>
+			<to-view-id>/layer2/Todo.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<display-name>LoginView</display-name>
 		<from-view-id>/LoginView.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>success1</from-outcome>
-			<to-view-id>/layer2/Todo.jsp</to-view-id>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/layer2/testPersonBean.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<validator>

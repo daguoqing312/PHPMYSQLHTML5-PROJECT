@@ -1,12 +1,12 @@
 @CHARSET "ISO-8859-1";
 
 table.todo  {
-  border: 1px solid #CCCCCC;
+  border: 3px solid #888888;
   }
   
 table.todo th {
   background: #EFEFEF none repeat scroll 0 0;
-  border-top: 1px solid #CCCCCC;
+  border-top: 2px solid #8888FF;
   font-size: small;
   padding-left: 5px;
   padding-right: 4px;
@@ -15,20 +15,31 @@ table.todo th {
 }
 
 table td:first-child {
-  font-weight:bold;
+  font-weight: normal;
+  
   }
 
 table .first {
-  width: 120px;
+  width: 200px;
   }
   
-table .rest {
-  width: 400px;
+
+table .last {
+  width: 200px;
   }
+/*  
+table .third {
+  width: 300px;
+  }  
+  
+table .fourth {
+  width: 200px;
+  }  
+  */
   
 table.todo {
   
-  border-top: 1px solid #CCCCCC;
+  border-top: 2px solid #CCCCCC;
   font-size: small;
   padding-left: 5px;
   padding-right: 4px;

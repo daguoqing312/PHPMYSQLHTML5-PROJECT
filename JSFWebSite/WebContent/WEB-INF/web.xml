@@ -63,11 +63,26 @@
     <param-name>org.apache.myfaces.AUTO_SCROLL</param-name>
     <param-value>true</param-value>
   </context-param>
+  
+  
   <!-- The added param to overcome the view state problem     -->
-    <context-param>
-	    <param-name>facelets.BUILD_BEFORE_RESTORE</param-name>
-	    <param-value>true</param-value>
-	</context-param>
+   
+   
+   <context-param>
+        <param-name>org.apache.myfaces.USE_ENCRYPTION</param-name>
+        <param-value>false</param-value>
+    </context-param>
+      
+  <!-- Indicate the encryption algorithm used for encrypt the view state. -->
+    
+    
+  
+  
+  
+  
+  
+  
+  
   
   <listener>
     <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
