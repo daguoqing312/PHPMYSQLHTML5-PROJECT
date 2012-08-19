@@ -31,13 +31,12 @@
 						      </h:panelGrid>				
 					    </h:panelGrid>
 					    
-					    <h:commandButton action="#{cardController.checkResult}" value="#{msg.show}"></h:commandButton>
+					    <h:commandButton id="checkBT" action="#{cardController.checkResult}" value="#{msg.show}"></h:commandButton>
 					    <h:commandButton action="#{cardController.next}" value="#{msg.next}" type="submit"></h:commandButton>
 					    <h:messages layout="table"></h:messages>
 					
-					    <h:panelGroup binding="#{cardController.resultPanel}" rendered="false">
-					      <h:message for="result"></h:message>
-					    </h:panelGroup>
+				   
+					    <h:message for="checkBT"></h:message>
 				
 				  </h:form>			
 			</f:view>
