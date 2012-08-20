@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+	<managed-bean>
+		<managed-bean-name>user</managed-bean-name>
+		<managed-bean-class>rt.beans.User</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>cardController</managed-bean-name>
+		<managed-bean-class>rt.beans.CardController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>card</property-name>
+			<property-class>rt.beans.Card</property-class>
+			<value>#{card}</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>card</managed-bean-name>
+		<managed-bean-class>rt.beans.Card</managed-bean-class>
+		<managed-bean-scope>none</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>todoController</managed-bean-name>
+		<managed-bean-class>rt.beans.TodoController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>person</managed-bean-name>
+		<managed-bean-class>rt.beans.PersonBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>LoginView</display-name>
+		<from-view-id>/LoginView.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>failed</from-outcome>
+			<to-view-id>/layer1/FailedLogin.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>LoginView</display-name>
+		<from-view-id>/LoginView.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>success1</from-outcome>
+			<to-view-id>/layer2/Todo.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>LoginView</display-name>
+		<from-view-id>/LoginView.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/layer2/testPersonBean.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<validator>
+		<display-name>rt.validator.LoginValidator</display-name>
+		<validator-id>rt.validator.LoginValidator</validator-id>
+		<validator-class>rt.validator.LoginValidator</validator-class>
+	</validator>
+
+</faces-config>
