@@ -2,6 +2,10 @@
     <wb-module deploy-name="JSPServlet">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+<<<<<<< HEAD
+=======
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+>>>>>>> b02703aa3d6a196b54901b2f7b57b7d13e407c0f
         <property name="context-root" value="JSPServlet"/>
         <property name="java-output-path" value="/JSPServlet/build/classes"/>
     </wb-module>

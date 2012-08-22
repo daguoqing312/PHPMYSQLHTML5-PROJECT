@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="src" path="test"/>
+>>>>>>> b02703aa3d6a196b54901b2f7b57b7d13e407c0f
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -13,5 +17,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="E:/html5 project/html5 workspace/junit4.11-SNAPSHOT-20120805-1225/junit-4.11-SNAPSHOT-20120805-1225.jar"/>
+>>>>>>> b02703aa3d6a196b54901b2f7b57b7d13e407c0f
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

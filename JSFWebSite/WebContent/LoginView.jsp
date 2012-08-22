@@ -19,8 +19,7 @@
 			      	<h:outputLabel value="#{msg.user}"></h:outputLabel>
 			      	
 			      	<h:inputText value="#{user.name}">
-					      <f:validator
-					          validatorId="rt.validator.LoginValidator" />
+					      <f:validator  validatorId="rt.validator.LoginValidator" />
 			      	</h:inputText>
 			      	
 			      	<h:outputLabel value="#{msg.password}"></h:outputLabel>

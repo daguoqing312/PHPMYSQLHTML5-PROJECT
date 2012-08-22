@@ -6,7 +6,7 @@ import javax.faces.context.FacesContext;
 
 public class CardController {
 	  private Card card;
-	  private UIPanel resultPanel;
+	  //private UIPanel resultPanel;
 	  private int result;
 
 	  public CardController() {
@@ -14,7 +14,7 @@ public class CardController {
 
 	  public String checkResult() {
 	    FacesContext context = FacesContext.getCurrentInstance();
-	    resultPanel.setRendered(true);
+	    //resultPanel.setRendered(true);
 
 	    if (checkOperation()) {
 	      context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Correct", null));
@@ -28,13 +28,13 @@ public class CardController {
 	    return (card.getLeft() * card.getRight() == result);
 	  }
 
-	  public UIPanel getResultPanel() {
+	 /* public UIPanel getResultPanel() {
 	    return resultPanel;
 	  }
 
 	  public void setResultPanel(UIPanel resultPanel) {
 	    this.resultPanel = resultPanel;
-	  }
+	  }*/
 
 	  public int getResult() {
 	    return result;
@@ -47,8 +47,9 @@ public class CardController {
 	  public String next() {
 	    FacesContext context = FacesContext.getCurrentInstance();
 	    if (checkOperation()){
-	      resultPanel.setRendered(false);
+	      //resultPanel.setRendered(false);
 	      card = new Card();
+	      result = 0;
 	      return null;
 	    } else {
 	      context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Incorrect, pls try again until correct.", null));

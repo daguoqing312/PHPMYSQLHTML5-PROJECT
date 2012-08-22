@@ -10,10 +10,11 @@ public class LoginValidator implements Validator {
 	public void validate(FacesContext context, UIComponent component,
 		      Object value) throws ValidatorException {
 		    String user = (String) value;
-		    if (!user.equalsIgnoreCase("tester")) {
+		    
+		    if (!user.equalsIgnoreCase("tester")&&!user.equalsIgnoreCase("tester1")) {
 		      FacesMessage message = new FacesMessage();
-		      message.setDetail("User " + user + " does not exists");
-		      message.setSummary("Login Incorrect");
+		      message.setDetail("User " + user + " does not exist");
+		      message.setSummary("The User does not exist.");
 		      message.setSeverity(FacesMessage.SEVERITY_ERROR);
 		      throw new ValidatorException(message);
 		    }
