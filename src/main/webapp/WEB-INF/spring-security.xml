@@ -5,7 +5,10 @@
                         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
 	<http auto-config="true">
-		<intercept-url pattern="/**" access="ROLE_USER" />
+		<intercept-url pattern="/" access="ROLE_USER" />
+		<intercept-url pattern="/admin" access="ROLE_ADMIN" />
+		<intercept-url pattern="/manager" access="ROLE_MANAGER" />
+		
 		<form-login login-page="/login" default-target-url="/"
 			authentication-failure-url="/loginfailed" />
 		<logout logout-success-url="/logout" />

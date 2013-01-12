@@ -21,6 +21,30 @@ public class LoginController {
 		return "hello";
  
 	}
+	
+	@RequestMapping(value="/admin", method = RequestMethod.GET)
+	public String adminWelcome(ModelMap model) {
+ 
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+	
+		model.addAttribute("username", name);
+		model.addAttribute("message", "Extreme Secure, only administrators permitted.");
+		return "hello";
+ 
+	}
+	
+	@RequestMapping(value="/manager", method = RequestMethod.GET)
+	public String managerWelcome(ModelMap model) {
+ 
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+	
+		model.addAttribute("username", name);
+		model.addAttribute("message", "Secure, only managers permitted.");
+		return "hello";
+ 
+	}
  
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login(ModelMap model) {
