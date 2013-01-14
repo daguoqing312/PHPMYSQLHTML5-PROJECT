@@ -9,6 +9,17 @@
 
 	<context:component-scan base-package="com.mkyong.common.controller" />
 
+	<bean id="accessDeniedHandler" class="com.mkyong.common.handler.MyAccessDeniedHandler">
+		<property name="accessDeniedUrl" value="accessDenied" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="cacheSeconds" value="0"></property>
+	</bean>
+
+
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
