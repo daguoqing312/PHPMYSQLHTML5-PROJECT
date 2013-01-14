@@ -17,19 +17,19 @@ public class LoginController {
 		String name = user.getUsername();
 	
 		model.addAttribute("username", name);
-		model.addAttribute("message", "Spring Security login + database example");
+		model.addAttribute("message", "A general user came in.");
 		return "hello";
  
 	}
 	
-	@RequestMapping(value="/admin", method = RequestMethod.GET)
-	public String adminWelcome(ModelMap model) {
+	@RequestMapping(value="/user", method = RequestMethod.GET)
+	public String userWelcome(ModelMap model) {
  
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String name = user.getUsername();
 	
 		model.addAttribute("username", name);
-		model.addAttribute("message", "Extreme Secure, only administrators permitted.");
+		model.addAttribute("message", "A user came in.");
 		return "hello";
  
 	}
@@ -42,7 +42,19 @@ public class LoginController {
 	
 		model.addAttribute("username", name);
 		model.addAttribute("message", "Secure, only managers permitted.");
-		return "hello";
+		return "manager";
+ 
+	}
+	
+	@RequestMapping(value="/admin", method = RequestMethod.GET)
+	public String adminWelcome(ModelMap model) {
+ 
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String name = user.getUsername();
+	
+		model.addAttribute("username", name);
+		model.addAttribute("message", "Extreme Secure, only administrators permitted.");
+		return "admin";
  
 	}
  
