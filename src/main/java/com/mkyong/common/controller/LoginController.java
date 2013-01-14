@@ -22,7 +22,7 @@ public class LoginController {
  
 	}
 	
-	@RequestMapping(value="/user", method = RequestMethod.GET)
+	@RequestMapping(value="/user/login", method = RequestMethod.GET)
 	public String userWelcome(ModelMap model) {
  
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -34,7 +34,7 @@ public class LoginController {
  
 	}
 	
-	@RequestMapping(value="/manager", method = RequestMethod.GET)
+	@RequestMapping(value="/manager/login", method = RequestMethod.GET)
 	public String managerWelcome(ModelMap model) {
  
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -46,7 +46,7 @@ public class LoginController {
  
 	}
 	
-	@RequestMapping(value="/admin", method = RequestMethod.GET)
+	@RequestMapping(value="/admin/login", method = RequestMethod.GET)
 	public String adminWelcome(ModelMap model) {
  
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();

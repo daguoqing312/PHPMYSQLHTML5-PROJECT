@@ -7,17 +7,14 @@
 		<http pattern="/static/**" security="none"/> <http pattern="/logout" security="none"/> -->
 
 	<http auto-config="true">
-		<intercept-url pattern="/"
-			access="ROLE_USER, ROLE_MANAGER, ROLE_ADMIN" />
-		<intercept-url pattern="/user"
-			access="ROLE_USER, ROLE_MANAGER, ROLE_ADMIN" />
-		<intercept-url pattern="/manager" access="ROLE_MANAGER, ROLE_ADMIN" />
-		<intercept-url pattern="/admin" access="ROLE_ADMIN" />
+		
+		<intercept-url pattern="/user/**"	access="ROLE_USER, ROLE_MANAGER, ROLE_ADMIN" />
+		<intercept-url pattern="/manager/**" access="ROLE_MANAGER, ROLE_ADMIN" />
+		<intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
 
-
-		<intercept-url pattern="/**"
-			access="ROLE_USER, ROLE_MANAGER, ROLE_ADMIN" />
-		<form-login login-page="/login" default-target-url="/user"
+		<intercept-url pattern="/**" access="permitAll" />
+		
+		<form-login login-page="/login" default-target-url="/user/login"
 			authentication-failure-url="/loginfailed" />
 		<logout logout-success-url="/logout" />
 	</http>
