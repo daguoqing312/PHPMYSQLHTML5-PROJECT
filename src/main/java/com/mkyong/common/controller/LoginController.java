@@ -51,7 +51,7 @@ public class LoginController {
  
 	}
 	
-	@RequestMapping(value="/accessDenied", method = RequestMethod.GET)
+	@RequestMapping(value="/user/accessDenied", method = RequestMethod.GET)
 	public String accessDenied(ModelMap model) { 
 		return "403"; 
 	}

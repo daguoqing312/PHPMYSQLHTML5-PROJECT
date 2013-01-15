@@ -10,7 +10,7 @@
 	<context:component-scan base-package="com.mkyong.common.controller" />
 
 	<bean id="accessDeniedHandler" class="com.mkyong.common.handler.MyAccessDeniedHandler">
-		<property name="accessDeniedUrl" value="../accessDenied" />
+		<property name="accessDeniedUrl" value="accessDenied" />
 	</bean>
 
 	<bean

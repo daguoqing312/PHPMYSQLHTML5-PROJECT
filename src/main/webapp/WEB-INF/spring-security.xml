@@ -7,7 +7,8 @@
 	<http pattern="/css/**" security="none" />
 	<http pattern="/logout*" security="none" />	
 	<http pattern="/loginfailed*" security="none" />
-	<http pattern="/accessDenied*" security="none" />
+	<http pattern="/user/accessDenied*" security="none" />
+	<http pattern="/admin/accessDenied*" security="none" />
 	<http pattern="/" security="none" />
 
 	
