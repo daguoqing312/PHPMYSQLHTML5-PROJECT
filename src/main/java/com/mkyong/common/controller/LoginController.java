@@ -55,4 +55,9 @@ public class LoginController {
 	public String accessDeniedAdmin(ModelMap model) { 
 		return "403Admin"; 
 	}
+	
+	@RequestMapping(value="/admin/secure", method = RequestMethod.GET)
+	public String accessAdminSecure(ModelMap model) { 
+		return "admin1"; 
+	}
 }
