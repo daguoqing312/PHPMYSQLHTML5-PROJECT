@@ -8,16 +8,16 @@
 	<http pattern="/logout*" security="none" />	
 	<http pattern="/loginfailed*" security="none" />
 	<http pattern="/accessDenied*" security="none" />
-	
+	<http pattern="/" security="none" />
 
 	
 	
 	<http auto-config="true">
 		
-		<intercept-url pattern="/" access="ROLE_USER, ROLE_ADMIN" />	
+		<intercept-url pattern="/user/**" access="ROLE_USER, ROLE_ADMIN" />	
 		<intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
 		
-		<form-login login-page="/login" default-target-url="/"
+		<form-login login-page="/login" default-target-url="/user/login"
 			authentication-failure-url="/loginfailed" />
 		<logout logout-success-url="/logout" delete-cookies="true"/>
 		

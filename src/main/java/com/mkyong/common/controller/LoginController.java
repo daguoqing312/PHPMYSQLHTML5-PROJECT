@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/")
 public class LoginController {
- 
+	
 	@RequestMapping(method = RequestMethod.GET)
+	public String homePage(ModelMap model){
+		return "home";
+	}
+ 
+	@RequestMapping(value="/user/login", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model, Principal principal ) { 
 		String name = principal.getName();
 		model.addAttribute("username", name);
 		model.addAttribute("message", "Spring Security Custom Form example");
-		return "hello"; 
+		return "user"; 
 	}
 	
 	@RequestMapping(value="/admin/login", method = RequestMethod.GET)
@@ -42,7 +47,7 @@ public class LoginController {
 	@RequestMapping(value="/logout", method = RequestMethod.GET)
 	public String logout(ModelMap model) {
  
-		return "login";
+		return "home";
  
 	}
 	
