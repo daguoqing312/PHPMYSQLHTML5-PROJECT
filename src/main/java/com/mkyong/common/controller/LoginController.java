@@ -18,7 +18,7 @@ public class LoginController {
 		return "hello"; 
 	}
 	
-	@RequestMapping(value="/admin/*", method = RequestMethod.GET)
+	@RequestMapping(value="/admin/login", method = RequestMethod.GET)
 	public String printWelcomeExtra(ModelMap model, Principal principal ) { 
 		String name = principal.getName();
 		model.addAttribute("username", name);
@@ -49,5 +49,10 @@ public class LoginController {
 	@RequestMapping(value="/accessDenied", method = RequestMethod.GET)
 	public String accessDenied(ModelMap model) { 
 		return "403"; 
+	}
+	
+	@RequestMapping(value="/admin/accessDenied", method = RequestMethod.GET)
+	public String accessDeniedAdmin(ModelMap model) { 
+		return "403Admin"; 
 	}
 }
