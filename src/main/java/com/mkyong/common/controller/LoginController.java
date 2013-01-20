@@ -30,7 +30,7 @@ public class LoginController {
 	
 		model.addAttribute("username", name);
 		model.addAttribute("message", "Extreme Secure, only administrators permitted.");
-		return "hello";
+		return "admin";
  
 	}
 	
@@ -42,7 +42,7 @@ public class LoginController {
 	
 		model.addAttribute("username", name);
 		model.addAttribute("message", "Secure, only managers permitted.");
-		return "hello";
+		return "manager";
  
 	}
  
